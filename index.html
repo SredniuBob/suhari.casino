@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приложение заблокировано</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        .block-container {
+            background-color: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .block-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, #ff4757, #ff3838);
+        }
+
+        .warning-icon {
+            font-size: 80px;
+            margin-bottom: 25px;
+            display: block;
+            color: #ff4757;
+            line-height: 1;
+        }
+
+        h1 {
+            color: #2d3436;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background-color: #ffeaa7;
+            color: #d63031;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 30px;
+            letter-spacing: 0.5px;
+        }
+
+        .block-message {
+            background-color: #f8f9fa;
+            border-left: 5px solid #ff4757;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .block-message p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #2d3436;
+            margin-bottom: 15px;
+        }
+
+        .block-message p:last-child {
+            margin-bottom: 0;
+        }
+
+        .law-details {
+            background-color: #fff5f5;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 25px;
+            border: 1px solid #ffcccc;
+        }
+
+        .law-details h3 {
+            color: #c23616;
+            font-size: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .law-details ul {
+            list-style-type: none;
+            text-align: left;
+        }
+
+        .law-details li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #ffcccc;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #636e72;
+        }
+
+        .law-details li:last-child {
+            border-bottom: none;
+        }
+
+        .law-details strong {
+            color: #2d3436;
+        }
+
+        .footer-note {
+            margin-top: 35px;
+            font-size: 14px;
+            color: #747d8c;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .block-container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            .block-message p {
+                font-size: 16px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="block-container">
+        <div class="warning-icon">
+            <i class="fas fa-ban"></i>
+        </div>
+        
+        <div class="status-badge">
+            <i class="fas fa-lock"></i> ПРИЛОЖЕНИЕ ЗАБЛОКИРОВАНО
+        </div>
+        
+        <h1>Доступ ограничен</h1>
+        
+        <div class="block-message">
+            <p><strong>Данное мини-приложение было заблокировано за нарушение законодательства Российской Федерации.</strong></p>
+            <p>Причиной блокировки послужило нарушение <strong>Федерального закона, статья 171.2 Уголовного кодекса РФ</strong> — «Незаконные организация и проведение азартных игр».</p>
+        </div>
+        
+        <div class="law-details">
+            <h3><i class="fas fa-gavel"></i> Правовые основания</h3>
+            <ul>
+                <li><strong>Статья 171.2 УК РФ</strong> запрещает организацию и проведение азартных игр с использованием информационно-телекоммуникационных сетей, включая Интернет, без соответствующей лицензии.</li>
+                <li>В соответствии с частью 1 данной статьи, такое правонарушение может наказываться <strong>штрафом до 500 000 рублей</strong>, обязательными работами, ограничением или лишением свободы.</li>
+                <li>Запуск азартных игр через Telegram Mini Apps также нарушает <strong>Федеральный закон № 244-ФЗ</strong>, запрещающий организацию азартных игр в Интернете на территории России.</li>
+            </ul>
+        </div>
+        
+        <div class="footer-note">
+            <p><i class="fas fa-info-circle"></i> Блокировка произведена на основании решения уполномоченного государственного органа. Попытки обхода блокировки могут повлечь административную или уголовную ответственность.</p>
+        </div>
+    </div>
+</body>
+</html>
